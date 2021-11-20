@@ -2,7 +2,100 @@
 @import './variables';
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap');
 
+@mixin flex($justify, $align, $direction: 'row') {
+    display: flex;
+    justify-content: $justify;
+    align-items: $align;
+    flex-direction: $direction;
+}
+
 body {
     background-color: $main-background;
     color: $White;
+    @include flex(center, center);
+    font-family: $font-family;
+
+    .container {
+        @include flex(center, center, column);
+        margin: 70px 25px;
+        padding: 20px;
+        background-color: $card-background;
+        border-radius: 15px;
+
+        .top-section {
+            margin-bottom: 20px;
+
+            .photo {
+                height: 100%;
+                width: 100%;
+                border-radius: 10px;
+            }
+        }
+
+        .bottom-section {
+
+            .nft-title {
+                font-size: x-large;
+                font-weight: 700;
+                margin-bottom: 15px;
+            }
+
+            .nft-description {
+                font-size: 16.5px;
+                font-weight: 300;
+                color: $soft-blue;
+                line-height: 25px;
+                margin-bottom: 16px;
+            }
+
+            .nft-details {
+                @include flex(space-between, center);
+                font-size: 15px;
+                margin-bottom: 15px;
+
+                .nft-amount {
+                    @include flex(flex-start, center);
+                    width: 100%;
+                    color: $cyan;
+
+                    .eth {
+                        margin-right: 5px;
+                    }
+                }
+
+                .nft-time {
+                    @extend .nft-amount;
+                    justify-content: flex-end;
+                    color: $soft-blue;
+
+                    .clock {
+                        @extend .eth;
+                    }
+                }
+            }
+
+            .nft-creator {
+                @include flex(flex-start, center);
+                padding-top: 15px;
+                border-top: 1px solid $line;
+                font-size: 16px;
+
+                .avatar {
+                    height: 2.2em;
+                    width: 2.2em;
+                    border: 2px solid $White;
+                    border-radius: 50%;
+                    margin-right: 16px;
+                }               
+
+                .creator-name {
+                    color: $soft-blue;
+
+                    span {
+                        color: $White;
+                    }
+                }
+            }
+        }
+    }
 }
