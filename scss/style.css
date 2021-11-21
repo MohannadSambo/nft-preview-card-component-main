@@ -152,4 +152,17 @@ body .container .bottom-section .nft-creator .creator-name {
 body .container .bottom-section .nft-creator .creator-name span {
   color: white;
 }
+
+@media only screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+  }
+  body .container {
+    height: 66%;
+    width: 20%;
+  }
+  body .container .bottom-section .nft-description {
+    font-size: 15.5px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

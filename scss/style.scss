@@ -99,3 +99,29 @@ body {
         }
     }
 }
+
+@media only screen and (min-width: $desktop) {
+    body {
+        height: 100vh;
+
+        .container {
+            height: 66%;
+            width: 20%;
+
+            .bottom-section {
+                .nft-description {
+                    font-size: 15.5px;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
