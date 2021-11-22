@@ -49,6 +49,11 @@ body .container {
 
 body .container .top-section {
   margin-bottom: 20px;
+  position: relative;
+}
+
+body .container .top-section:hover .overlay {
+  opacity: 0.6;
 }
 
 body .container .top-section .photo {
@@ -57,10 +62,44 @@ body .container .top-section .photo {
   border-radius: 10px;
 }
 
+body .container .top-section .photo:hover {
+  background-color: #00fff7;
+}
+
+body .container .top-section .overlay {
+  height: 99%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #00fff7;
+  border-radius: 10px;
+  opacity: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: "row";
+          flex-direction: "row";
+}
+
 body .container .bottom-section .nft-title {
   font-size: x-large;
   font-weight: 700;
   margin-bottom: 15px;
+}
+
+body .container .bottom-section .nft-title:hover {
+  color: #00fff7;
 }
 
 body .container .bottom-section .nft-description {
@@ -151,6 +190,10 @@ body .container .bottom-section .nft-creator .creator-name {
 
 body .container .bottom-section .nft-creator .creator-name span {
   color: white;
+}
+
+body .container .bottom-section .nft-creator .creator-name span:hover {
+  color: #00fff7;
 }
 
 @media only screen and (min-width: 1440px) {
